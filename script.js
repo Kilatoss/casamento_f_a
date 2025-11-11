@@ -59,30 +59,6 @@ class SliderClip {
   }
 }
 
-function initPageNavigation() {
-  const navLinks = document.querySelectorAll(".navbar-link");
-  const sections = document.querySelectorAll(".page-section");
-  const homeSection = document.querySelector("#home");
-
-  if (homeSection) {
-    homeSection.classList.add("section-active");
-  }
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        sections.forEach((section) => {
-          section.classList.remove("section-active");
-        });
-        targetSection.classList.add("section-active");
-      }
-    });
-  });
-}
 
 async function carregarPresentes() {
   const gridContainer = document.querySelector(".prendas-grid");
@@ -124,6 +100,61 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".slider")) {
     const slider = new SliderClip(document.querySelector(".slider"));
   }
-  initPageNavigation();
+  
   carregarPresentes();
+
+  const sections = document.querySelectorAll(".page-section");
+  const navLinks = document.querySelectorAll(".navbar-link");
+  let currentSectionIndex = 0;
+  let isScrolling = false;
+  const scrollCooldown = 1000;
+
+  function navigateToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+
+    currentSectionIndex = index;
+
+    sections.forEach((section, i) => {
+      section.classList.toggle("section-active", i === index);
+    });
+
+    navLinks.forEach((link, i) => {
+      link.classList.toggle("active-link", i === index);
+    });
+  }
+
+  navigateToSection(0);
+
+  navLinks.forEach((link, index) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (isScrolling) return; 
+      navigateToSection(index);
+    });
+  });
+
+  window.addEventListener('wheel', (event) => {
+    if (window.innerWidth <= 1024) {
+      return;
+    }
+    
+    if (isScrolling) return;
+
+    const direction = event.deltaY > 0 ? 'down' : 'up';
+    let nextIndex = currentSectionIndex;
+
+    if (direction === 'down') {
+      nextIndex++;
+    } else {
+      nextIndex--;
+    }
+
+    if (nextIndex >= 0 && nextIndex < sections.length) {
+      isScrolling = true;
+      navigateToSection(nextIndex);
+      setTimeout(() => {
+        isScrolling = false;
+      }, scrollCooldown);
+    }
+  });
 });
