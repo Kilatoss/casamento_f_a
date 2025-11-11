@@ -65,11 +65,12 @@ async function carregarPresentes() {
     return;
   }
   try {
-    const presentes = (await fetch("prendas.json")).json;
+    const response = await fetch("prendas.json");
 
-    if (!presentes.ok) {
-      throw new Error(`HTTP error! status: ${presentes.status}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    const presentes = await response.json();
 
     let html = "";
     presentes.forEach((prenda) => {
