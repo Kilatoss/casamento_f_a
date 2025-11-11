@@ -58,28 +58,22 @@ class SliderClip {
     this.Nav[index].classList.add("current_dot");
   }
 }
-
-
 async function carregarPresentes() {
   const gridContainer = document.querySelector(".prendas-grid");
 
   if (!gridContainer) {
-    console.log("Container de prendas não encontrado.");
     return;
   }
-
   try {
-    const response = await fetch('prendas.json');
+    const presentes = (await fetch("prendas.json")).json;
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    if (!presentes.ok) {
+      throw new Error(`HTTP error! status: ${presentes.status}`);
     }
 
-    const presentes = await response.json();
-
-    let htmlParaInserir = "";
-    presentes.forEach(prenda => {
-      htmlParaInserir += `
+    let html = "";
+    presentes.forEach((prenda) => {
+      html += `
         <div class="prenda-item">
           <img src="${prenda.imagem}" alt="${prenda.nome}">
           <h4>${prenda.nome}</h4>
@@ -88,19 +82,17 @@ async function carregarPresentes() {
       `;
     });
 
-    gridContainer.innerHTML = htmlParaInserir;
-
+    gridContainer.innerHTML = html;
   } catch (error) {
-    console.error("Erro ao carregar o ficheiro de presentes:", error);
-    gridContainer.innerHTML = "<p>Não foi possível carregar a lista de presentes. Tente novamente mais tarde.</p>";
+    gridContainer.innerHTML =
+      "<p>Não foi possível carregar a lista de presentes. Tente novamente mais tarde.</p>";
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".slider")) {
     const slider = new SliderClip(document.querySelector(".slider"));
   }
-  
+
   carregarPresentes();
 
   const sections = document.querySelectorAll(".page-section");
@@ -117,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section, i) => {
       section.classList.toggle("section-active", i === index);
     });
-
     navLinks.forEach((link, i) => {
       link.classList.toggle("active-link", i === index);
     });
@@ -128,26 +119,22 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link, index) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      if (isScrolling) return; 
+      if (isScrolling) return;
       navigateToSection(index);
     });
   });
 
-  window.addEventListener('wheel', (event) => {
+  window.addEventListener("wheel", (event) => {
     if (window.innerWidth <= 1024) {
       return;
     }
-    
     if (isScrolling) return;
 
-    const direction = event.deltaY > 0 ? 'down' : 'up';
+    const direction = event.deltaY > 0 ? "down" : "up";
     let nextIndex = currentSectionIndex;
 
-    if (direction === 'down') {
-      nextIndex++;
-    } else {
-      nextIndex--;
-    }
+    if (direction === "down") nextIndex++;
+    else nextIndex--;
 
     if (nextIndex >= 0 && nextIndex < sections.length) {
       isScrolling = true;
