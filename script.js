@@ -93,7 +93,7 @@ async function carregarPresentes() {
   }
 
   try {
-    const response = await fetch('./prendas.json');
+    const response = await fetch('prendas.json');
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
