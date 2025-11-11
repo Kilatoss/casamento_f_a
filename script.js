@@ -64,17 +64,19 @@ async function carregarPresentes() {
   if (!gridContainer) {
     return;
   }
+
   try {
-    const response = await fetch("prendas.json");
+    const response = await fetch('prendas.json');
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+
     const presentes = await response.json();
 
-    let html = "";
-    presentes.forEach((prenda) => {
-      html += `
+    let htmlParaInserir = "";
+    presentes.forEach(prenda => {
+      htmlParaInserir += `
         <div class="prenda-item">
           <img src="${prenda.imagem}" alt="${prenda.nome}">
           <h4>${prenda.nome}</h4>
@@ -83,17 +85,19 @@ async function carregarPresentes() {
       `;
     });
 
-    gridContainer.innerHTML = html;
+    gridContainer.innerHTML = htmlParaInserir;
+
   } catch (error) {
-    gridContainer.innerHTML =
-      "<p>Não foi possível carregar a lista de presentes. Tente novamente mais tarde.</p>";
+    console.error("Erro ao carregar o ficheiro de presentes:", error);
+    gridContainer.innerHTML = "<p>Não foi possível carregar a lista de presentes. Tente novamente mais tarde.</p>";
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".slider")) {
     const slider = new SliderClip(document.querySelector(".slider"));
   }
-
+  
   carregarPresentes();
 
   const sections = document.querySelectorAll(".page-section");
@@ -110,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section, i) => {
       section.classList.toggle("section-active", i === index);
     });
+
     navLinks.forEach((link, i) => {
       link.classList.toggle("active-link", i === index);
     });
@@ -120,22 +125,26 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link, index) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      if (isScrolling) return;
+      if (isScrolling) return; 
       navigateToSection(index);
     });
   });
 
-  window.addEventListener("wheel", (event) => {
+  window.addEventListener('wheel', (event) => {
     if (window.innerWidth <= 1024) {
       return;
     }
+    
     if (isScrolling) return;
 
-    const direction = event.deltaY > 0 ? "down" : "up";
+    const direction = event.deltaY > 0 ? 'down' : 'up';
     let nextIndex = currentSectionIndex;
 
-    if (direction === "down") nextIndex++;
-    else nextIndex--;
+    if (direction === 'down') {
+      nextIndex++;
+    } else {
+      nextIndex--;
+    }
 
     if (nextIndex >= 0 && nextIndex < sections.length) {
       isScrolling = true;
