@@ -45,7 +45,7 @@
     "nome": "Câmera Fotográfica",
     "loja": "Fnac",
     "url": "https://www.fnac.pt/Nikon-D7000-AF-S-DX-18-105mm-f-3-5-5-6G-ED-VR-Camara-Fotografica-Digital-Camara-Reflex-D-SLR/a333637",
-    "imagem": "img/camara.jpg"
+    "imagem": "./img/camara.jpg"
   },
   {
     "nome": "Conjunto de Malas de Viagem",
