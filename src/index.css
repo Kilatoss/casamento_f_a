@@ -1,0 +1,65 @@
+:root {
+  --primary: #fefefa;
+  --bg-color: #eaddc3;
+  --container: #c7a270;
+  --accent1: #8f4646;
+  --accent2: #5a835c;
+  --text-grey: #555555;
+}
+
+@font-face {
+  font-family: "Readable";
+  src: url("/fonts/themunday.woff2") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cursive";
+  src: url("/fonts/WhisperingSignature.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Text";
+  src: url("/fonts/BRLNSR.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Readable", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-grey);
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 80px 20px;
+}
+
+.section-title {
+  color: var(--accent1);
+  font-family: "Readable", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+}

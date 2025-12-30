@@ -1,0 +1,72 @@
+.rsvp-section {
+  background: url("/img/bg-art.png") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvp-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.rsvp-intro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rsvp-form {
+  font-family: "Text";
+  background-color: var(--container);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.rsvp-form label {
+  color: var(--primary);
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  margin: 10px 0 20px 0;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.rsvp-form button {
+  background-color: var(--accent2);
+  color: var(--primary);
+  font-size: 1.2rem;
+  padding: 15px;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  width: 150px;
+  transition: opacity 0.2s;
+}
+
+.rsvp-form button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .rsvp-form {
+    padding: 20px;
+  }
+  .rsvp-form button {
+    width: 100%;
+  }
+}

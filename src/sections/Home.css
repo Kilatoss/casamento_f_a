@@ -1,0 +1,34 @@
+.banner {
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.banner-text p {
+  font-family: "Cursive";
+  color: var(--primary);
+  font-size: 5em;
+  margin: 0;
+  text-shadow: 0px 5px 2px black;
+}
+
+@media (max-width: 768px) {
+  .banner-text p {
+    font-size: 3em;
+    bottom: 50px;
+  }
+}
