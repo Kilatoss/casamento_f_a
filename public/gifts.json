@@ -3,72 +3,72 @@
     "nome": "Máquina de Café Expresso",
     "loja": "Worten",
     "url": "https://www.worten.pt/produtos/maquina-de-cafe-expresso-becken-becm9238-20-bar-1100-w-preto-8069588",
-    "imagem": "img/coffee.jpg"
+    "imagem": "/img/coffee.jpg"
   },
   {
     "nome": "Conjunto de Talheres (60 Peças)",
     "loja": "El Corte Inglés",
     "url": "https://www.elcorteingles.pt/casa-e-decoracao/A20414119-faqueiro-de-60-pecas-alteo-wmf/?parentCategoryId=5007.15920060024&color=A%C3%A7o",
-    "imagem": "img/talheres.avif"
+    "imagem": "/img/talheres.avif"
   },
   {
     "nome": "Contribuição para a Lua de Mel",
     "loja": "IBAN",
     "url": "#",
-    "imagem": "img/lua_de_mel.avif"
+    "imagem": "/img/lua_de_mel.avif"
   },
   {
     "nome": "Air Fryer",
     "loja": "Worten",
     "url": "https://www.worten.pt/produtos/fritadeira-sem-oleo-becken-baf9331bk-digital-5-l-preto-8093106",
-    "imagem": "img/airfryer.jpg"
+    "imagem": "/img/airfryer.jpg"
   },
   {
     "nome": "Aspirador Robô",
     "loja": "Radio Popular",
     "url": "https://www.radiopopular.pt/produto/aspirador-robot-irobot-roomba-105-1",
-    "imagem": "img/roomba.jpg"
+    "imagem": "/img/roomba.jpg"
   },
   {
     "nome": "Conjunto de Panelas",
     "loja": "HÔMA",
     "url": "https://www.ikea.com/pt/pt/link-para-o-produto",
-    "imagem": "img/panelas.webp"
+    "imagem": "/img/panelas.webp"
   },
   {
     "nome": "Serviço de Jantar",
     "loja": "Continente",
     "url": "https://www.continente.pt/produto/servico-6-pessoas-estrelas-douradas-kasa-8383126.html",
-    "imagem": "img/servico-jantar.jpg"
+    "imagem": "/img/servico-jantar.jpg"
   },
   {
     "nome": "Câmera Fotográfica",
     "loja": "Fnac",
     "url": "https://www.fnac.pt/Nikon-D7000-AF-S-DX-18-105mm-f-3-5-5-6G-ED-VR-Camara-Fotografica-Digital-Camara-Reflex-D-SLR/a333637",
-    "imagem": "./img/camara.jpg"
+    "imagem": ".//img/camara.jpg"
   },
   {
     "nome": "Conjunto de Malas de Viagem",
     "loja": "Amazon",
     "url": "https://www.amazon.es/dp/B0D5CW8S3H?shipTo=PT&source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A74S2QOLPV38T&language=pt_PT",
-    "imagem": "img/malas.jpg"
+    "imagem": "/img/malas.jpg"
   },
   {
     "nome": "Gira-discos Vinil",
     "loja": "Fnac",
     "url": "https://www.fnac.pt/Gira-Discos-Audio-Technica-AT-LP60X-Gira-Discos-Gira-Discos/a10495794",
-    "imagem": "img/gira-discos.jpg"
+    "imagem": "/img/gira-discos.jpg"
   },
   {
     "nome": "Voo de Balão",
     "loja": "Odisseias",
     "url": "https://www.odisseias.com/aventura-e-actividades/experiencia/voo-em-balao-de-ar-quente-ribatejo/172144",
-    "imagem": "img/balao.webp"
+    "imagem": "/img/balao.webp"
   },
   {
     "nome": "Bicicletas de Montanha (Par)",
     "loja": "Decathlon",
     "url": "https://www.decathlon.pt/p/btt-passeio-st-120-27-5-preto-azul/_/R-p-305496?mc=8640691&c=Cinza%20antracite_Laranja%20escuro%20fluorescente",
-    "imagem": "img/bicicletas.avif"
+    "imagem": "/img/bicicletas.avif"
   }
 ]

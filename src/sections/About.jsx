@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './About.css';
 
 const images = [
-  "url(./public/img/noivos4.jpg)",
-  "url(./public/img/noivos5.jpg)",
-  "url(./public/img/noivos6.jpg)",
-  "url(./public/img/noivos7.jpg)",
-  "url(./public/img/noivos8.jpg)"
+  "url(img/noivos4.jpg)",
+  "url(img/noivos5.jpg)",
+  "url(img/noivos6.jpg)",
+  "url(img/noivos7.jpg)",
+  "url(img/noivos8.jpg)"
 ];
 
 const About = () => {
