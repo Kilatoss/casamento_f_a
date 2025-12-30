@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './About.css';
 
 const images = [
-  "url(/img/noivos4.jpg)",
-  "url(/img/noivos5.jpg)",
-  "url(/img/noivos6.jpg)",
-  "url(/img/noivos7.jpg)",
-  "url(/img/noivos8.jpg)"
+  "url(./public/img/noivos4.jpg)",
+  "url(./public/img/noivos5.jpg)",
+  "url(./public/img/noivos6.jpg)",
+  "url(./public/img/noivos7.jpg)",
+  "url(./public/img/noivos8.jpg)"
 ];
 
 const About = () => {
@@ -22,11 +22,14 @@ const About = () => {
   return (
     <section id="about" className="intro">
       <div className="intro-content">
-        <span className="section-title">The Couple</span>
+        <span className="section-title">OS NOIVOS</span>
         <h1>Francisca & André</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-          eveniet amet excepturi voluptates dolorem totam ad quod hic.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
       </div>
 

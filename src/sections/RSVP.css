@@ -1,72 +1,135 @@
 .rsvp-section {
-  background: url("/img/bg-art.png") no-repeat center center;
+  /* Background image is handled inline in JSX for path safety */
   background-size: cover;
+  background-position: center;
   background-blend-mode: multiply;
-  background-color: var(--bg-color);
+  background-color: rgba(234, 221, 195, 0.6); /* Tint the image slightly */
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
-.rsvp-container {
+.rsvp-card {
+  background-color: var(--primary);
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
-.rsvp-intro {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
+.rsvp-text {
+  font-family: "MyReadableVar", sans-serif;
+  color: #666;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .rsvp-form {
-  font-family: "Text";
-  background-color: var(--container);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+.form-title
+{
+  color: var(--accent1);
+  font-family: "Readable", Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
-.rsvp-form label {
-  color: var(--primary);
-  margin-top: 10px;
+.form-group label {
+  font-family: "Readable", sans-serif;
   font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--container);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.rsvp-form input,
-.rsvp-form textarea {
-  margin: 10px 0 20px 0;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 6px;
   font-family: Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+  resize: none;
 }
 
-.rsvp-form button {
-  background-color: var(--accent2);
-  color: var(--primary);
-  font-size: 1.2rem;
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--container);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(199, 162, 112, 0.2);
+}
+
+.submit-btn {
+  margin-top: 10px;
   padding: 15px;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
+  background-color: var(--accent2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "Readable", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
   cursor: pointer;
-  align-self: flex-end;
-  width: 150px;
-  transition: opacity 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.rsvp-form button:hover {
-  opacity: 0.9;
+.submit-btn:hover {
+  background-color: #4a6d4c; /* Slightly darker accent2 */
+  transform: translateY(-2px);
 }
 
+/* Success Message State */
+.success-message h3 {
+  font-family: "Cursive", serif;
+  font-size: 3rem;
+  color: var(--accent1);
+  margin: 0 0 1rem 0;
+}
+
+.success-message p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: var(--container);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-  .rsvp-form {
-    padding: 20px;
-  }
-  .rsvp-form button {
-    width: 100%;
+  .rsvp-card {
+    padding: 2rem 1.5rem;
   }
 }

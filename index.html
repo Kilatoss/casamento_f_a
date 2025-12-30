@@ -1,113 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <title>Francisca & André</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
-      <li class="navbar-item"><a href="#about" class="navbar-link">Os Noivos</a></li>
-      <li class="navbar-item"><a href="#programa" class="navbar-link">Programa</a></li>
-      <li class="navbar-item"><a href="#presenca" class="navbar-link">Presenca</a></li>
-      <li class="navbar-item"><a href="#prendas" class="navbar-link">Prendas</a></li>
-    </ul>
-  </nav>
-
-  <div class="banner page-section" id="home">
-    <img src="img/noivos1.png" alt="Banner Image" />
-    <p>Venham ao nosso casamento! <br> 25 de Julho de 2026</p>
-  </div>
-
-  <section class="intro page-section" id="about">
-    <div class="left">
-      <div>
-        <span>OS NOIVOS</span>
-        <h1>Francisca e André</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-          eveniet amet excepturi voluptates dolorem totam ad quod hic, porro
-          accusamus, repellat, corrupti at obcaecati ducimus, dolor quibusdam
-          sequi nemo inventore?
-        </p>
-      </div>
-    </div>
-
-    <div class="slider">
-      <ul>
-        <li style="background-image: url(img/noivos4.jpg)"></li>
-        <li style="background-image: url(img/noivos5.jpg)"></li>
-        <li style="background-image: url(img/noivos6.jpg)"></li>
-        <li style="background-image: url(img/noivos7.jpg)"></li>
-        <li style="background-image: url(img/noivos8.jpg)"></li>
-      </ul>
-      <ul>
-        <nav>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-        </nav>
-      </ul>
-    </div>
-  </section>
-
-  <section id="programa" class="programa page-section">
-    <span>PROGRAMA</span>
-    <div class="prog_content">
-      <div class="grid-item">
-        <img src="img/localcerimonia.jpg" id="localcerimonia" alt="local da Cerimónia" />
-      </div>
-      <div class="grid-item">
-        <p>Cerimónia:</p>
-        <h4>Capela universitária de São Miguel</h4>
-        <p>Horario:</p>
-        <h4>15h </h4>
-      </div>
-      <div class="grid-item">
-        <p>Festa:</p>
-        <h4>Palácio Quinta da Portela</h4>
-        <p>Dress Code:</p>
-        <h4> Formal<br><br>
-        Informamos que tanto o cocktail como o jantar serao realizados no exterior e em piso com relva.</h4> 
-      </div>
-      <div class="grid-item">
-        <img src="img/localfesta.jpg" id="localfesta" alt="local da Festa" />
-      </div>
-    </div>
-  </section>
-
-  <section id="presenca" class="presenca page-section">
-    <div>
-      <span>PRESENCA</span>
-      <p>É com muita alegria que vos convidamos a fazer parte deste dia tão especial que tanto ansiamos para poder comemorar com todos!</p>
-      <form class="formulario">
-        Nome<br>
-        <input type="text" placeholder="Nome Completo" name="nome"><br>
-        E-mail<br>
-        <input type="email" placeholder="E-mail" name="email"><br>
-        Restrições Alimentares<br>
-        <input type="text" placeholder="Ex: Alergia a marisco, Vegetariano..." name="restricoes"><br>
-        Mensagem<br>
-        <textarea placeholder="Mensagem" rows="2" name="mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="prendas" class="prendas page-section">
-    <span>LISTA DE PRENDAS</span>
-    <div class="prendas-grid">
-    </div>
-  </section>
-
-  <script type="text/javascript" src="script.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="./src/index.css">
+    <title>Francisca & André</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
 </html>

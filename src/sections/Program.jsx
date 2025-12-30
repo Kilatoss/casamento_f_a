@@ -3,27 +3,61 @@ import './Program.css';
 const Program = () => {
   return (
     <section id="program" className="program-section">
-      <span className="section-title">Program</span>
-      <div className="program-grid">
-        <div className="grid-item img-wrapper">
-          <img src="/img/localcerimonia.jpg" alt="Ceremony Location" />
+      <span className="section-title">O PROGRAMA</span>
+      
+      <div className="program-container">
+        
+        {/* Event 1: Ceremony */}
+        <div className="event-row">
+          <div className="event-image">
+            <img src="img/localcerimonia.jpg" alt="São Miguel Chapel" />
+          </div>
+          <div className="event-details">
+            <span className="time-badge">15:00</span>
+            <h3>A Cerimónia</h3>
+            <h4>Capela de São Miguel</h4>
+            <p>
+              Juntem-se a nós para a cerimônia de casamento na histórica Capela da Universidade.
+              Por favor, cheguem 15 minutos antes para encontrarem o vosso lugar.
+            </p>
+            <a 
+              href="https://maps.google.com/?q=Capela+de+São+Miguel+Coimbra" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="map-link"
+            >
+              Ver Mapa &rarr;
+            </a>
+          </div>
         </div>
-        <div className="grid-item info">
-          <p>Ceremony:</p>
-          <h4>São Miguel Chapel</h4>
-          <p>Time:</p>
-          <h4>15:00</h4>
+
+        {/* Event 2: Reception */}
+        <div className="event-row reverse">
+          <div className="event-image">
+            <img src="img/localfesta.jpg" alt="Quinta da Portela" />
+          </div>
+          <div className="event-details">
+            <span className="time-badge">17:30</span>
+            <h3>A Festa</h3>
+            <h4>Palácio da Quinta da Portela</h4>
+            <p>
+              Jantar, dançar e muito mais para celebrar. 
+            </p>
+            <div className="info-box">
+              <strong>Dress Code:</strong> Formal<br/>
+              Nota: <b>Os cocktails e o jantar será ao ár livre. <br></br>Por favor, escolham o vosso calçado cuidadosamente.</b>
+            </div>
+            <a 
+              href="https://maps.app.goo.gl/1efCUaNaNNejTJT18" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="map-link"
+            >
+              Ver Mapa &rarr;
+            </a>
+          </div>
         </div>
-        <div className="grid-item info">
-          <p>Reception:</p>
-          <h4>Quinta da Portela Palace</h4>
-          <p>Dress Code:</p>
-          <h4>Formal</h4>
-          <small>Note: Cocktail and Dinner will be on grass.</small>
-        </div>
-        <div className="grid-item img-wrapper">
-          <img src="/img/localfesta.jpg" alt="Party Location" />
-        </div>
+
       </div>
     </section>
   );

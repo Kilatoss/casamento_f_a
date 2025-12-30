@@ -6,7 +6,7 @@ const Gifts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/gifts.json') // Renamed from prendas.json
+    fetch('./public/gifts.json')
       .then((res) => res.json())
       .then((data) => {
         setGifts(data);
@@ -20,7 +20,7 @@ const Gifts = () => {
 
   return (
     <section id="gifts" className="gifts-section">
-      <span className="section-title">Gift Registry</span>
+      <span className="section-title">Prendas</span>
       
       {loading ? (
         <p>Loading registry...</p>
