@@ -3,7 +3,7 @@ import './Program.css';
 const Program = () => {
   return (
     <section id="program" className="program-section">
-      <span className="section-title">O PROGRAMA</span>
+      <span className="section-title" style={{marginLeft:'165px'}}>O PROGRAMA</span>
       
       <div className="program-container">
         
@@ -38,14 +38,16 @@ const Program = () => {
           </div>
           <div className="event-details">
             <span className="time-badge">17:30</span>
-            <h3>A Festa</h3>
+            <h3>Jantar e Festa</h3>
             <h4>Palácio da Quinta da Portela</h4>
             <p>
               Jantar, dançar e muito mais para celebrar. 
             </p>
             <div className="info-box">
-              <strong>Dress Code:</strong> Formal<br/>
-              Nota: <b>Os cocktails e o jantar será ao ár livre. <br></br>Por favor, escolham o vosso calçado cuidadosamente.</b>
+              <strong>Dress Code:</strong> Formal (Fato e gravata, Vestido)<br/>
+              <strong>Para as senhoras:</strong> O jantar será numa zona com relva, por isso recomendamos sapatos de salto largo.
+
+
             </div>
             <a 
               href="https://maps.app.goo.gl/1efCUaNaNNejTJT18" 

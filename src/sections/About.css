@@ -17,6 +17,7 @@
 .intro-content h1 {
   font-family: "Cursive";
   font-size: 7rem;
+  font-weight: normal;
   color: var(--container);
   margin: 0;
   line-height: 1;

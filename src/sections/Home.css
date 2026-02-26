@@ -19,10 +19,10 @@
 }
 
 .banner-text p {
-  font-family: "Cursive";
+  font-family: "Times New Roman", serif;
   color: var(--container);
   font-size: 4.4em;
-  font-weight: bold;
+  font-weight:400;
   margin: 0;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 3px 2px 4px black;

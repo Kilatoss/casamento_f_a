@@ -5,7 +5,7 @@ const Home = () => {
     <section id="home" className="banner">
       <img src="img/noivos1.png" alt="Couple" className="banner-img" />
       <div className="banner-text">
-        <p>Vem celebrar o nosso Casamento! <br /> 25 de Julho, 2026</p>
+        <p>Francisca e André <br /> 25 de Julho de 2026 <br /> <span style={{fontSize: '0.75em'}}>Quinta da Portela, Coimbra</span></p> 
       </div>
     </section>
   );

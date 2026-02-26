@@ -23,13 +23,13 @@ const About = () => {
     <section id="about" className="intro">
       <div className="intro-content">
         <span className="section-title">OS NOIVOS</span>
-        <h1>Francisca & André</h1>
+        <h1>Convite de Casamento</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          É como muita alegria que vos convidamos para o nosso casamento, no dia 25 de julho de 2026, em Coimbra. 
+Estamos certos que a vossa presença irá completar este grande dia que tanto ansiamos
+A cerimónia irá realizar-se na capela de S.Miguel da Universidade de Coimbra.
+ A cerimónia terá início às 15:00 horas, já a contar com os 15 minutos académicos da noiva.
+ O copo d’água e a festa serão realizados no palácio da quinta da Portela, Coimbra.
         </p>
       </div>
 

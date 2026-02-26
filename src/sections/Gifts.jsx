@@ -6,7 +6,7 @@ const Gifts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('./public/gifts.json')
+    fetch('./gifts.json')
       .then((res) => res.json())
       .then((data) => {
         setGifts(data);

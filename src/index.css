@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: "Cursive";
-  src: url("/fonts/WhisperingSignature.woff2") format("woff2");
+  src: url("/fonts/SourceSerif.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -56,7 +56,7 @@ section {
 .section-title {
   position: absolute;
   top: 1.5rem;
-  left: 2rem;
+  left: 5rem;
   z-index: 10;
   font-weight: bold;
   text-transform: uppercase;
