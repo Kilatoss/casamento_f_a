@@ -3,7 +3,6 @@ import './Program.css';
 const Program = () => {
   return (
     <section id="program" className="program-section">
-      <span className="section-title" style={{marginLeft:'165px'}}>O PROGRAMA</span>
       
       <div className="program-container">
         
@@ -17,8 +16,8 @@ const Program = () => {
             <h3>A Cerimónia</h3>
             <h4>Capela de São Miguel</h4>
             <p>
-              Juntem-se a nós para a cerimônia de casamento na histórica Capela da Universidade.
-              Por favor, cheguem 15 minutos antes para encontrarem o vosso lugar.
+              A cerimónia irá realizar-se na capela de S.Miguel da Universidade de Coimbra.
+ A cerimónia terá início às 15:00 horas, já a contar com os 15 minutos académicos da noiva.
             </p>
             <a 
               href="https://maps.google.com/?q=Capela+de+São+Miguel+Coimbra" 
@@ -26,11 +25,11 @@ const Program = () => {
               rel="noreferrer" 
               className="map-link"
             >
-              Ver Mapa &rarr;
+              Ver no Mapa &rarr;
             </a>
           </div>
         </div>
-
+<hr></hr>
         {/* Event 2: Reception */}
         <div className="event-row reverse">
           <div className="event-image">
@@ -41,9 +40,10 @@ const Program = () => {
             <h3>Jantar e Festa</h3>
             <h4>Palácio da Quinta da Portela</h4>
             <p>
-              Jantar, dançar e muito mais para celebrar. 
+               O copo d’água e a festa serão realizados no Palácio da Quinta da Portela, Coimbra. 
             </p>
             <div className="info-box">
+              <span style={{fontVariant: "small-caps", fontWeight: "bold", fontSize: "14pt", color: "#5a835c"}}>Nota Adicional</span> <br/>
               <strong>Dress Code:</strong> Formal (Fato e gravata, Vestido)<br/>
               <strong>Para as senhoras:</strong> O jantar será numa zona com relva, por isso recomendamos sapatos de salto largo.
 
@@ -55,7 +55,7 @@ const Program = () => {
               rel="noreferrer" 
               className="map-link"
             >
-              Ver Mapa &rarr;
+              Ver no Mapa &rarr;
             </a>
           </div>
         </div>

@@ -59,6 +59,13 @@
   font-family: "Readable", sans-serif;
 }
 
+hr {
+  border: none;
+  border-top: 3px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
 .event-details h3 {
   font-family: "Cursive", serif;
   font-size: 3rem;
@@ -99,6 +106,7 @@
   font-family: "Readable", sans-serif;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
+  font-size: 1.1rem;
 }
 
 .map-link:hover {

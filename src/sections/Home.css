@@ -13,7 +13,7 @@
 
 .banner-text {
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
   width: 100%;
   text-align: center;
 }
@@ -21,7 +21,7 @@
 .banner-text p {
   font-family: "Times New Roman", serif;
   color: var(--container);
-  font-size: 4.4em;
+  font-size: 3.9em;
   font-weight:400;
   margin: 0;
   background: rgba(0, 0, 0, 0.4);
@@ -32,11 +32,16 @@
   border: 1px solid rgba(255,255,255,0.2);
   display: inline-block; 
   max-width: 80%;
+  line-height: 1.1;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 768px) {
   .banner-text p {
-    font-size: 3em;
+    font-size: 1.90em;
     bottom: 50px;
+  }
+  .banner-img {
+    object-position: 42.7% 50%;
   }
 }

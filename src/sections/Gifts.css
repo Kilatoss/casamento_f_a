@@ -1,51 +1,168 @@
-.gifts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 2rem;
-}
-
-.gift-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.2s;
+.gifts-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-top: 50px;
+}
+.gifts-section .section-title {
+  position: static;
+  font-size: 1.6rem;
+  font-weight: bold !important;
 }
 
-.gift-card:hover {
-  transform: translateY(-5px);
+.gifts-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-.gift-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
+.gifts-text {
+  font-family: "MyReadableVar", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-.gift-card h4 {
-  font-family: "Text";
-  font-size: 1.1rem;
-  margin: 1rem 0;
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* Container do IBAN */
+.iban-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.iban-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f8f9fa;
+  border: 1px dashed #ccc;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iban-container:hover {
+  background-color: #e9ecef;
+  border-color: #999;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.iban-text {
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.copy-icon {
+  width: 20px;
+  height: 20px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.iban-container:hover .copy-icon {
   color: #333;
 }
 
-.gift-card a {
-  background-color: var(--accent2);
-  color: var(--primary);
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: "Text";
+/* Pop-up do IBAN Copiado */
+.copy-popup {
+  position: absolute;
+  top: -45px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: "Text", sans-serif;
   font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+  pointer-events: none; /* Para não bloquear cliques */
 }
 
-.gift-card a:hover {
+/* Triângulo por baixo do popup apontando para o IBAN */
+.copy-popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #4CAF50 transparent transparent transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão Vista Alegre */
+.vista-alegre-btn {
+  display: inline-block;
+  background-color: var(--accent2, #d4af37);
+  color: var(--primary, #fff);
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-family: "readable", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.vista-alegre-btn:hover {
   filter: brightness(0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+.bank-icon {
+  width: 30px;
+  height: 30px;
+  padding: 0 !important;
+  transition: transform 0.2s ease;
+}
+@media screen and (max-width: 768px) {
+  .gifts-section {
+    padding: 2rem 1rem;
+    margin-top: 30px;
+  }
+  .gifts-section .section-title {
+    font-size: 1.4rem;
+  }
+  .gifts-text {
+    font-size: 1.2rem;
+  }
+  .iban-text {
+    font-size: 1rem;
+  }
+  .iban-container {
+    padding: 10px 10px;
+  }
+  .vista-alegre-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+  
 }
