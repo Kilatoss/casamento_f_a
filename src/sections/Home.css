@@ -13,30 +13,55 @@
 
 .banner-text {
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
   width: 100%;
   text-align: center;
 }
 
 .banner-text p {
-  font-family: "Times New Roman", serif;
-  color: var(--container);
-  font-size: 4.4em;
+  font-family: "Cursive2", serif;
+  color: var(--primary);
+  font-size: 8.2em;
   font-weight:400;
   margin: 0;
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); 
+  border: 1px solid rgba(255,255,255,0.2);*/
   text-shadow: 3px 2px 4px black;
-  backdrop-filter: blur(4px);
-  padding: 1.5rem 2rem;
+  
+  padding: 3.5rem 2rem;
   border-radius: 10px; 
-  border: 1px solid rgba(255,255,255,0.2);
+  
   display: inline-block; 
   max-width: 80%;
+  line-height: .8;
+}
+.e {
+  font-size: .5em;
+  vertical-align:top;
+}
+
+.subtitulo
+{
+  font-family: "Times New Roman", serif;
+  font-size: 16pt;
+  display: inline-block;
+  line-height: 1.7 !important;
+  margin-bottom: 0px !important;
+  padding: 0 !important;
 }
 
 @media (max-width: 768px) {
   .banner-text p {
-    font-size: 3em;
+    font-size: 4.90em;
     bottom: 50px;
+  }
+  .subtitulo
+  {
+    font-size: 14pt;
+    line-height: 1.5 !important;
+  }
+  .banner-img {
+    object-position: 42.7% 50%;
   }
 }

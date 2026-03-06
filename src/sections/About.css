@@ -13,12 +13,20 @@
   flex-direction: column;
   justify-content: center;
 }
+.intro-img {
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  width: 38%;
+  transform:rotateY(180deg);
+  rotate: 20deg;
+}
 
 .intro-content h1 {
   font-family: "Cursive";
   font-size: 7rem;
   font-weight: normal;
-  color: var(--container);
+  color: var(--accent1);
   margin: 0;
   line-height: 1;
 }
@@ -65,10 +73,20 @@
     padding: 3rem 1.5rem;
   }
   .intro-content h1 {
-    font-size: 3.4rem;
+    font-size: 2.6rem;
+  }
+  .intro-content .section-title {
+    left: 1.5rem;
+    top: 1rem;
+    font-size: 1rem;
   }
   .slider-container {
     width: 100%;
     height: 50vh;
   }
+  .intro-img {
+    width: 50%;
+    right: 20%;
+    bottom: 70%;
+  } 
 }

@@ -1,15 +1,17 @@
 :root {
   --primary: #fefefa;
   --bg-color: #eaddc3;
-  --container: #c7a270;
-  --accent1: #8f4646;
+  --container: #40b3a2;
+  --verdeEscuro: #0c7c66;
+  --verdeEscuro-darker-2: #1e432f;
+  --accent1: #b78ef0;
   --accent2: #5a835c;
   --text-grey: #555555;
 }
 
 @font-face {
   font-family: "Readable";
-  src: url("/fonts/themunday.woff2") format("woff");
+  src: url("/fonts/Themunday2.otf") format("opentype");
   font-display: swap;
 }
 
@@ -23,6 +25,12 @@
 @font-face {
   font-family: "Cursive";
   src: url("/fonts/SourceSerif.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cursive2";
+  src: url("/fonts/Hello.ttf") format("truetype");
   font-display: swap;
 }
 

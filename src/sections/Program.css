@@ -49,7 +49,7 @@
 }
 
 .time-badge {
-  background-color: var(--accent1);
+  background-color: var(--verdeEscuro);
   color: #fff;
   padding: 5px 15px;
   border-radius: 50px;
@@ -59,11 +59,19 @@
   font-family: "Readable", sans-serif;
 }
 
+hr {
+  border: none;
+  border-top: 3px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
 .event-details h3 {
   font-family: "Cursive", serif;
   font-size: 3rem;
   margin: 0;
-  color: var(--container);
+  color: var(--accent1);
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -71,14 +79,14 @@
   font-family: "Readable", sans-serif;
   font-size: 1.5rem;
   margin: 10px 0 20px 0;
-  color: #333;
+  color: #555 ;
 }
 
 .event-details p {
   font-family: "MyReadableVar", sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #666;
+  color: #000;
   margin-bottom: 20px;
 }
 
@@ -93,12 +101,13 @@
 }
 
 .map-link {
-  color: var(--accent2);
+  color: var(--verdeEscuro);
   text-decoration: none;
   font-weight: bold;
   font-family: "Readable", sans-serif;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s;
+  font-size: 1.1rem;
 }
 
 .map-link:hover {
